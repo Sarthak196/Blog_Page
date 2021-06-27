@@ -5,8 +5,9 @@
  2. ACTIVATE VIRTUAL ENVIRONMENT BY : .\scripts\activate
  3. INSTALL DJANGO BY : pip install django
  4. RUN PROJECT BY : python manage.py runserver
- 5. CLOSE SERVER BY : Ctrl+c
+ 5. CLOSE SERVER BY : ctrl+C
  
- ## Few useful commands:
+ ## Few useful commands:-
+
  1. CREATE SUPER USER OR ADMIN BY: python manage.py createsuperuser
  
