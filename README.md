@@ -7,7 +7,7 @@
  3. INSTALL DJANGO BY : pip install django
  4. RUN PROJECT BY : python manage.py runserver
  5. CLOSE SERVER BY : ctrl+C
- 6. To quit server type : DEACTIVATE
+ 6. TO QUIT SERVER TYPE : DEACTIVATE
  
  ## Few useful commands:-
  
