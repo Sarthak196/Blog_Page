@@ -1,4 +1,5 @@
 # Blog_Page
+
 ## To run the project:
  
  1. THROUGH COMMAND PROMPT GO TO THE mysite AND INSTALL VIRTUAL ENVIRONMENT BY : pip install virtualenv
@@ -8,6 +9,7 @@
  5. CLOSE SERVER BY : ctrl+C
  
  ## Few useful commands:-
+ 
 
  1. CREATE SUPER USER OR ADMIN BY: python manage.py createsuperuser
  
