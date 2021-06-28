@@ -12,5 +12,5 @@
 
  1. CREATE SUPER USER OR ADMIN BY: python manage.py createsuperuser
 
- this name should be deletedd later : saurabh raj
+
  
