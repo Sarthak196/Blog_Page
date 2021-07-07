@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+<!--
     <div class="centerstage">
         {% for post in post_list %}
             <div class="post">
@@ -9,6 +10,19 @@
                 </div>
                 <a href="{% url 'post_detail' pk=post.pk %}">Comments:{{post.approve_comments.count}}</a>
             </div>
-        {% endfor %}
+    {% endfor %}
     </div>
+-->
+    {% for post in post_list %}
+        <div class="card" style="width: auto; margin-top: 40px;">
+            <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h5>
+            <div class="date">
+                <p>Published : {{post.published_date|date:"D M Y"}}</p>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Comments : {{post.approve_comments.count}}</a>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock content %}

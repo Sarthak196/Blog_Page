@@ -1,11 +1,35 @@
-.techfont{
-    font-family:'Russo One',sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+
+footer {
+  position: fixed;
+  padding: 10px 10px 50px 10px;
+  bottom: 0;
+  width: 100%; /* Height of the footer*/ 
+  height: 40px;
+  text-align: center;
+  align-items: baseline;
+  background-color: #eeeeee;
+}
+
+footer > ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+footer > ul > li > a, footer > ul > li > a:visited {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
 }
 
 .bigbrand{
-    font-size: 1.5em;
+  font-family: 'Courgette', cursive;
+  font-size: 1.5em;
+  color: white;
+}
+#nav-logo{
+  width: 6%;
+  height: auto;
 }
 
 .centerstage{
@@ -33,7 +57,8 @@
   right: 0px;
 }
 
- /* Color changer code from Codepen.io */
+ /* 
+ Color changer code from Codepen.io 
 .loader {
     
     filter:hue-rotate(0deg);
@@ -41,6 +66,7 @@
     animation:hue 10000ms infinite linear;
    
   }
+
   
 @keyframes spinify {
     0% {
@@ -71,3 +97,5 @@
     100%{filter:hue-rotate(360deg);}
     
   }
+
+  */
