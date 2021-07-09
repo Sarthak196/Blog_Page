@@ -8,7 +8,7 @@
  6. Copy and paste the url provided
 
  > 8. CLOSE SERVER BY : ctrl+C
- > 9. To quit server type : ```deactivate```
+ > 9. To quit virtual environment type : ```deactivate```
  
  ## To create a super user :-
  ```python manage.py createsuperuser```
