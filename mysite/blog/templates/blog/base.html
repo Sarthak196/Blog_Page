@@ -61,7 +61,7 @@
 
                     {% else %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="{% url 'login'%}">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'login'%}">Login <i class="fa fa-user"></i></a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -72,6 +72,7 @@
             <div class="blog_posts">
                     {% block content %}
                     {% endblock content %}
+
             </div>
         </div>
 

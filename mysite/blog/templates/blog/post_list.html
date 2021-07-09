@@ -7,7 +7,7 @@
                 <div class="date">
                     <p>Published : {{post.published_date|date:"d M Y "}}</p>
                 </div>
-                <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Read More</a>
+                <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Read More ></a>
                 <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary float-right">Comments : {{post.approve_comments.count}}</a>
             </div>
         </div>
