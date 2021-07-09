@@ -1,17 +1,14 @@
 # Blog_Page
+## Installation:
+ 1. Head to cloned folder location and install Django ``` pip install django ```
+ 2. Install a **virtual environment** in root folder : ``` pip install virtualenv ```
+ 3. Create a **virtual environment** : ```virtualenv <env name>```
+ 4. Activate the **virtual environment** : ```.\scripts\activate```
+ 5. Run the server : ```python manage.py runserver```
+ 6. Copy and paste the url provided
 
-### To run the project:-
+ > 8. CLOSE SERVER BY : ctrl+C
+ > 9. To quit server type : ```deactivate```
  
- 1. THROUGH COMMAND PROMPT GO TO THE mysite AND INSTALL VIRTUAL ENVIRONMENT BY : pip install virtualenv
- 2. ACTIVATE VIRTUAL ENVIRONMENT BY : .\scripts\activate
- 3. INSTALL DJANGO BY : pip install django
- 4. RUN PROJECT BY : python manage.py runserver
- 5. CLOSE SERVER BY : ctrl+C
- 6. TO QUIT SERVER TYPE : DEACTIVATE
- 
- ### Few useful commands:-
- 
- 1. CREATE SUPER USER OR ADMIN BY: python manage.py createsuperuser
-
-
- 
+ ## To create a super user :-
+ ```python manage.py createsuperuser```

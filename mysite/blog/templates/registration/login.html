@@ -1,14 +1,13 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div class="jumbotron">
-    <h2>Please Login:</h2>
-    <h3>(Must be an admin)</h3>
-
+<div class="jumbotron" style="margin:40px auto";>
+    <h2>Login</h2>
+    <h5>Must be an admin</h5><br>
     {% if form.errors %}
         <p>Your username and password did not match!</p>
     {% endif %}
 
-    <form action="{% url 'login' %}" method="POST">
+    <form action="{% url 'login' %}" method="POST" style="text-align: center;">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" class='btn btn-primary' value="Login">

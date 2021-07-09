@@ -1,11 +1,11 @@
-.techfont{
-    font-family:'Russo One',sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
 .bigbrand{
-    font-size: 1.5em;
+  font-family: 'Courgette', cursive;
+  font-size: 1.5em;
+  color: white;
+}
+#nav-logo{
+  width: 6%;
+  height: auto;
 }
 
 .centerstage{
@@ -33,7 +33,15 @@
   right: 0px;
 }
 
- /* Color changer code from Codepen.io */
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+ /* 
+ Color changer code from Codepen.io 
 .loader {
     
     filter:hue-rotate(0deg);
@@ -41,6 +49,7 @@
     animation:hue 10000ms infinite linear;
    
   }
+
   
 @keyframes spinify {
     0% {
@@ -71,3 +80,5 @@
     100%{filter:hue-rotate(360deg);}
     
   }
+
+  */

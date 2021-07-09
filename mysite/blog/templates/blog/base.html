@@ -2,67 +2,86 @@
 {% load static %}
 <html>
     <head>
-        <title>BlogPage</title>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--tab icon--> 
+        <link rel="icon" href="data:image/jpeg;base64,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">
+        
+        <title>BlogIT!</title>
+
+        <!-- our own CSS -->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
         <!-- Bootstrap  -->
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
         <!-- Medium Style Editor -->
         <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
 
-        <!-- our own CSS -->
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <!-- Glyphicons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Fuggles&display=swap" rel="stylesheet">
 
     </head>
-    <body class="loader">
+    <body>
         
         <!-- Navbar -->
-        <nav class="navbar navbar-default techfont custom-navbar">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li><a class="nabbar-brand bigbrand" href="{% url 'post_list' %}">My Blog</a></li>
-                    <li><a href="{% url 'about' %}">About Us</a></li>
-                    <!-- About our comapny the frontend goes in about.html -->
-                    <li><a href="https://github.com">Github</a></li> 
-                    <!-- Insert a simple front end page link here instead of github and linkin -->
-                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-    
-                </ul>
-
-                <ul class='nav navbar-nav navbar-right'>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <img alt="logo" style="width: 3%; height: auto;" src="data:image/jpeg;base64,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" class="img-responsive" /></a>
+            <a class="navbar-brand bigbrand" href="{% url 'post_list' %}" style="font-size:40px; margin-left: 40px;">BlogIT!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                
+            <div class="collapse navbar-collapse navbar-right" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto" style="margin-right: 40px; font-size: 20px;">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'post_new' %}">New Post</a></li>
-                        <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                        <li><a>Welcome: {{user.username}}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'post_new' %}">New Post</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                {{user.username}}
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                            </div>
+                          </li>
+
                     {% else %}
-                        <li><a class="nav navbar-right" href="{% url 'login'%}"><span class="glyphicon glyphicon-user"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'login'%}">Login <span class="glyphicon glyphicon-user"></span></a></li>
                     {% endif %}
                 </ul>
-                
             </div>
-
-        </nav>
+        </nav>  
 
         <!-- Content Block -->
-        <div class="content container">
-            <div class="row">
-                <div class="col-mid-8">
-                    <div class="blog_posts">
-                        {% block content %}
-                        {% endblock content %}
-                    </div>
-                </div>
+        <div class="container" style="padding:10px; padding-bottom:60px; position: relative;">    
+            <div class="blog_posts">
+                    {% block content %}
+                    {% endblock content %}
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-center text-white">      
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.397);">
+            © 2021 
+            <a class="btn btn-outline-light btn-floating" href="" role="button"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+
     </body>
 </html>
