@@ -68,7 +68,7 @@
         </nav>  
 
         <!-- Content Block -->
-        <div class="container" style="padding:10px; padding-bottom:60px; position: relative;">    
+        <div class="container" style="padding:10px; padding-bottom:60px;">    
             <div class="blog_posts">
                     {% block content %}
                     {% endblock content %}
@@ -76,12 +76,12 @@
         </div>
 
         <!-- Footer -->
-        <footer class="bg-dark text-center text-white">      
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.397);">
-            © 2021 
-            <a class="btn btn-outline-light btn-floating" href="" role="button"><i class="fab fa-github"></i></a>
+        <div class="container-fluid">
+            <div class="row bg-dark text-center text-white" style="position: fixed; bottom: 0; width: 100%; padding: 5px;">
+                <div class="col">© 2021 All Rights Reserved</div>
+                <div class="col"><a class="btn btn-outline-light btn-floating" href="" role="button"><i class="fab fa-github"></i></a></div>
             </div>
-        </footer>
+        </div>
 
     </body>
 </html>

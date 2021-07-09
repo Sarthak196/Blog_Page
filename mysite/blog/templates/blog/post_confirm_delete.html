@@ -1,36 +1,11 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-    <h1 class="posttitle loader" style="margin-top: 20px;">{{post.title}}</h1>
-    {% if post.published_date %}
-        <div class="date postdate">
-            {{ post.published_date }}
-        </div>
-    {% else %}
-        <a class="btn btn-dark" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-    {% endif %}
-
-    <a class="btn btn-info" href="{% url 'post_list' %}">Home</a>
-    <p class='postcontent'>{{post.text|safe|linebreaksbr}}</p>
-
-    {% if user.is_authenticated %}
-        <a class="btn btn-secondary" title="Edit" href="{% url 'post_edit' pk=post.pk %}"><i class="fas fa-edit"></i></a>
-        <a class="btn btn-primary" title="Delete Post" href="{% url 'post_remove' pk=post.pk %}"><i class="far fa-trash-alt"></i></a>
-        <a class="btn btn-outline-primary float-right" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
-    {% endif %}
-
-    <div class="container" style="margin-bottom: 50px;">
-        {% for comment in post.comments.all %}
-            <hr>
-            {% if user.is_authenticated or comment.approved_comment %}
-                <p><h5>Posted By : <b>{{comment.author}}</b></h5>{{comment.created_date}}</p>
-                {{comment.text|safe|linebreaks}}
-                {% if not comment.approved_comment %}
-                <a class="btn btn-danger float-right" href="{% url 'comment_remove' pk=comment.pk %}"><i class="fas fa-eraser"> Remove Comment</i></a>
-                <a class="btn btn-primary" href="{% url 'comment_approve' pk=comment.pk %}"><i class="far fa-thumbs-up"> Approve Comment</i></a>
-                {% endif %}
-            {% endif %}
-            {% empty %}
-                <hr><p>No Comments</p>
-        {% endfor %}
+    <div class="container jumbotron">
+        <form method="POST">
+            {% csrf_token %}
+            <p>Are you sure you want to delete {{object}} ?</p>
+            <input type="submit" class="btn btn-danger float-right" style="width: 10em;" value="Confirm">
+            <a class="btn btn-outline-secondary float-right"  href="{% url 'post_list' %}" style="margin: 0px 10px 0px 0px; width: 10em;">Cancel</a>
+        </form>
     </div>
 {% endblock content %}
